@@ -1,0 +1,45 @@
+<div>
+
+    <h3>Contact</h3>
+
+    <div [ngClass]="{ row: showHisto  }">
+
+        <div [ngClass]="{ 'col-6': showHisto  }">
+            <label for="">envoyeur</label><br>
+                <input type="text" [(ngModel)]="pseudo"><br>
+                <label for="">destinataire</label><br>
+                <select [(ngModel)]="destinataire">
+                    <option value="-" disabled>- choisissez destinataire -</option>
+                    <option value="cuistot">cuistot</option>
+                    <option value="proprio">prorpiétaire</option>
+                    <option value="serveur">serveur</option>
+                </select><br>
+                <label for="">message</label><br>
+                <textarea name="" id="" cols="30" rows="5" [(ngModel)]="message"></textarea><br>
+
+                <button [disabled]="!pseudo || pseudo == '' || destinataire == '-' || !message || message == '' " (click)="onSend()">envoyer</button><br>
+
+                <input type="checkbox" [(ngModel)]="showHisto"><label for="">voir formulaire</label>
+        </div>
+        <div class="col-6" *ngIf="showHisto">
+
+            <h4> Historique </h4>
+
+
+            <div *ngIf="historique.length != 0; else elseMessages">
+                <div class="card" style="width: 18rem;" *ngFor="let msg of historique">
+                    <div class="card-body">
+                    <h5 class="card-title">par {{ msg.pseudo }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">à {{ msg.destinataire }}</h6>
+                    <p class="card-text">{{ msg.message }}</p>
+                    </div>
+                </div>
+            </div>
+            <p #elseMessage>Pas de message</p>
+            
+
+        </div>
+    </div>
+
+    
+</div>

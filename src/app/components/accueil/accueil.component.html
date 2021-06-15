@@ -1,0 +1,11 @@
+
+<div>
+
+    <h2>Accueil</h2>
+
+    <label for="input-nom">Quel est vote nom </label><br>
+    <input type="text" id="input-nom" [(ngModel)]="nom"><br>
+
+    <p> Bienvenue {{ nom == null || nom == '' ? "cher.e client.e " : nom }} </p>
+
+</div>
