@@ -13,6 +13,7 @@ import { MenuPizzaComponent } from './components/menu/menu-pizza/menu-pizza.comp
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from './components/nav/nav.component';
 import { Page404Component } from './components/page404/page404.component';
+import { PlatPipe } from './pipes/plat.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Page404Component } from './components/page404/page404.component';
     MenuPateComponent,
     MenuPizzaComponent,
     NavComponent,
-    Page404Component
+    Page404Component,
+    PlatPipe
   ],
   imports: [
     BrowserModule,
