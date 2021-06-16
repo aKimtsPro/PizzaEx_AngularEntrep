@@ -10,7 +10,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuPateComponent } from './components/menu/menu-pate/menu-pate.component';
 import { MenuPizzaComponent } from './components/menu/menu-pizza/menu-pizza.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './components/nav/nav.component';
 import { Page404Component } from './components/page404/page404.component';
 import { PlatPipe } from './pipes/plat.pipe';
@@ -38,7 +38,8 @@ import { MessageCardComponent } from './components/contact/message-card/message-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

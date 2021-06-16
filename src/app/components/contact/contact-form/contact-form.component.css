@@ -1,0 +1,7 @@
+.ng-invalid.ng-dirty:not(form) {
+    border: 2px solid red;
+}
+
+.invalid-error {
+    color: red;
+}
