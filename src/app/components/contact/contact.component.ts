@@ -8,9 +8,6 @@ import { Message } from 'src/app/models/message.model';
 })
 export class ContactComponent implements OnInit {
 
-  pseudo: string;
-  destinataire: string = '-';
-  message: string;
 
   showHisto: boolean = true;
 
@@ -21,17 +18,9 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSend() {
-
-    if( this.pseudo && this.pseudo != '' && this.destinataire != '-' && this.message && this.message != '' ) {
-      this.historique.push({
-        pseudo: this.pseudo,
-        destinataire: this.destinataire,
-        message: this.message
-      })
-      console.log(this.historique);
-    }
-
+  onMsgSent( msg: Message ) {
+    this.historique.push(msg);
+    console.log(this.historique);
   }
 
 }

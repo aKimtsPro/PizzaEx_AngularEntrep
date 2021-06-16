@@ -14,6 +14,9 @@ import { FormsModule } from '@angular/forms';
 import { NavComponent } from './components/nav/nav.component';
 import { Page404Component } from './components/page404/page404.component';
 import { PlatPipe } from './pipes/plat.pipe';
+import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
+import { ContactHistoComponent } from './components/contact/contact-histo/contact-histo.component';
+import { MessageCardComponent } from './components/contact/message-card/message-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { PlatPipe } from './pipes/plat.pipe';
     MenuPizzaComponent,
     NavComponent,
     Page404Component,
-    PlatPipe
+    PlatPipe,
+    ContactFormComponent,
+    ContactHistoComponent,
+    MessageCardComponent
   ],
   imports: [
     BrowserModule,

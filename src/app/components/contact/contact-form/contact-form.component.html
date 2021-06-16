@@ -1,0 +1,13 @@
+<label for="">envoyeur</label><br>
+<input type="text" [(ngModel)]="pseudo"><br>
+<label for="">destinataire</label><br>
+<select [(ngModel)]="destinataire">
+    <option value="-" disabled>- choisissez destinataire -</option>
+    <option value="cuistot">cuistot</option>
+    <option value="proprio">prorpiétaire</option>
+    <option value="serveur">serveur</option>
+</select><br>
+<label for="">message</label><br>
+<textarea name="" id="" cols="30" rows="5" [(ngModel)]="message"></textarea><br>
+
+<button [disabled]="!pseudo || pseudo == '' || destinataire == '-' || !message || message == '' " (click)="onSend()">envoyer</button><br>

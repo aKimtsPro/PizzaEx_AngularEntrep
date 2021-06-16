@@ -1,0 +1,6 @@
+<h4> Historique </h4>
+
+<div *ngIf="historique.length != 0">
+    <app-message-card *ngFor="let msg of historique" [msg]="msg" ></app-message-card>
+</div>
+<p *ngIf="historique.length == 0">Pas de message</p>
